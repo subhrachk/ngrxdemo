@@ -1,0 +1,19 @@
+<div>
+    <h1>Product List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr class="tr">
+                <td class="td">Name</td>
+                <td class="td">Price</td>
+                <td class="td"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of allproducts;">
+                <td class="td">{{product.name}}</td>
+                <td class="td">{{product.price}}</td>
+                <td><a (click)="deleteProduct(product._id)">X</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
